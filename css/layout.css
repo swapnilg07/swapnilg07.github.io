@@ -398,6 +398,521 @@
 	-o-transform: scaleX(-1);
 }
 
+/* --------------------------------------------------------------------------
+   Styles moved from inline <style> block in index.html
+   Consolidated here for maintainability. Keep in sync if edited in future.
+   -------------------------------------------------------------------------- */
+
+:root {
+	--accent: #78cc6d;
+	--accent-dark: #4fb943;
+	--card-bg: rgba(255, 255, 255, 0.03);
+	--card-border: rgba(255, 255, 255, 0.08);
+	--soft-text: #b9c0c9;
+	--white: #ffffff;
+	--shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+.background {
+	background: radial-gradient(circle at top left, rgba(120, 204, 109, 0.14), transparent 28%), radial-gradient(circle at bottom right, rgba(120, 204, 109, 0.08), transparent 25%);
+}
+
+.container.opened {
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+}
+
+.card-inner,
+.card-started .profile,
+.content,
+.resume-item,
+.service-item,
+.skills-list,
+.info-list {
+	border-radius: 20px !important;
+}
+
+.card-inner {
+	box-shadow: var(--shadow);
+	border: 1px solid var(--card-border);
+	background: rgba(20, 24, 31, 0.92);
+}
+
+.card-started .profile {
+	overflow: hidden;
+	box-shadow: var(--shadow);
+	border: 1px solid var(--card-border);
+	background: rgba(20, 24, 31, 0.92);
+}
+
+.profile .slide {
+	position: relative;
+}
+
+.profile .slide::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.55));
+}
+
+.profile .image img {
+	border: 5px solid rgba(255, 255, 255, 0.12);
+	box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+.profile .title {
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: 0.4px;
+}
+
+.profile .subtitle {
+	font-size: 15px;
+	color: var(--accent);
+	font-weight: 500;
+	margin-top: 10px;
+	line-height: 1.8;
+}
+
+.profile .social a {
+	width: 42px;
+	height: 42px;
+	line-height: 42px;
+	text-align: center;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.05);
+	margin: 0 6px;
+	transition: all 0.3s ease;
+	display: inline-block;
+	border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.profile .social a:hover {
+	transform: translateY(-4px);
+	background: var(--accent);
+	color: #fff !important;
+	box-shadow: 0 10px 25px rgba(120, 204, 109, 0.28);
+}
+
+.lnks .lnk {
+	border-radius: 14px;
+	transition: all 0.3s ease;
+	font-weight: 600;
+	letter-spacing: 0.2px;
+}
+
+.lnks .lnk:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.lnks .lnk:first-child {
+	background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+	color: #fff !important;
+	border: none !important;
+}
+
+.lnks .lnk.discover {
+	background: rgba(255, 255, 255, 0.04);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.top-menu ul li a {
+	transition: all 0.25s ease;
+	border-radius: 14px;
+}
+
+.top-menu ul li a:hover,
+.top-menu ul li.active a {
+	background: rgba(120, 204, 109, 0.08);
+}
+
+.title {
+	font-size: 24px !important;
+	font-weight: 700 !important;
+	letter-spacing: 0.3px;
+	margin-bottom: 28px !important;
+}
+
+.text-box p,
+.resume-item p,
+.service-item p,
+.info-list ul li,
+.skills-list ul li .name {
+	color: var(--soft-text);
+	line-height: 1.9;
+	font-size: 14.5px;
+}
+
+.text-box {
+	padding: 24px;
+	background: var(--card-bg);
+	border: 1px solid var(--card-border);
+	border-radius: 18px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.about-highlights {
+	margin-top: 18px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.about-highlights span {
+	display: inline-block;
+	padding: 10px 16px;
+	border-radius: 999px;
+	background: rgba(120, 204, 109, 0.12);
+	color: #dff8dc;
+	font-size: 13px;
+	font-weight: 500;
+	border: 1px solid rgba(120, 204, 109, 0.18);
+}
+
+.info-list {
+	padding: 22px;
+	background: var(--card-bg);
+	border: 1px solid var(--card-border);
+}
+
+.info-list ul li {
+	padding: 12px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.info-list ul li:last-child {
+	border-bottom: none;
+}
+
+.info-list strong {
+	color: #fff;
+	font-weight: 600;
+}
+
+.service-item,
+.resume-item,
+.skills-list {
+	background: var(--card-bg);
+	border: 1px solid var(--card-border);
+	padding: 24px !important;
+	transition: all 0.3s ease;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+.service-item:hover,
+.resume-item:hover,
+.skills-list:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+	border-color: rgba(120, 204, 109, 0.18);
+}
+
+.service-item .icon,
+.resume-title .icon,
+.skill-title .icon {
+	color: var(--accent);
+}
+
+.service-item .name,
+.resume-item .name,
+.resume-title .name,
+.skill-title .name {
+	font-weight: 600;
+	color: var(--white);
+	letter-spacing: 0.2px;
+}
+
+.resume-item {
+	height: auto !important;
+	min-height: unset !important;
+	margin-bottom: 20px;
+}
+
+.resume-item .date {
+	display: inline-block;
+	padding: 6px 12px;
+	background: rgba(120, 204, 109, 0.12);
+	color: #dff8dc;
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: 600;
+	margin-bottom: 14px;
+	border: 1px solid rgba(120, 204, 109, 0.18);
+}
+
+.resume-item .company {
+	color: var(--accent);
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.resume-items {
+	display: block !important;
+}
+
+.border-line-h:after,
+.border-line-v:after {
+	display: none !important;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
+}
+
+/* ===== SKILLS GENERAL ===== */
+.skills-list ul li {
+	margin-bottom: 22px;
+}
+
+.skills-list ul li:last-child {
+	margin-bottom: 0;
+}
+
+.skills-list ul li .name {
+	margin-bottom: 8px;
+	display: block;
+}
+
+/* ===== CORE AREA / NORMAL BARS ===== */
+.skills-list:not(.dotted):not(.circles):not(.list) .progress {
+	height: 10px !important;
+	background: rgba(255, 255, 255, 0.08) !important;
+	border-radius: 999px !important;
+	overflow: hidden;
+	width: 100% !important;
+	margin-top: 10px;
+}
+
+.skills-list:not(.dotted):not(.circles):not(.list) .progress .percentage {
+	height: 100%;
+	display: block;
+	background: linear-gradient(90deg, var(--accent), var(--accent-dark)) !important;
+	border-radius: 999px !important;
+	box-shadow: 0 0 15px rgba(120, 204, 109, 0.28);
+}
+
+/* ===== PROGRAMMING LANGUAGES / DOTTED ===== */
+.skills-list.dotted ul li .progress {
+	height: 12px !important;
+	background: transparent !important;
+	border-radius: 0 !important;
+	overflow: auto !important;
+	display: flex !important;
+	gap: 8px;
+	align-items: center;
+	margin-top: 12px;
+	width: 100%;
+	/* keep dots in a single row, allow horizontal scroll on very small widths */
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+
+@media (max-width: 480px) {
+	.skills-list.dotted ul li .progress {
+		gap: 6px;
+	}
+	.skills-list.dotted ul li .progress span.dg,
+	.skills-list.dotted ul li .progress span.da {
+		width: 10px;
+		height: 10px;
+	}
+}
+
+
+
+/* ===== FRAMEWORKS / TOOLS / ROUND STYLE ===== */
+.skills-list.circles ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 28px 16px;
+}
+
+.skills-list.circles ul li {
+	width: calc(50% - 10px);
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.skills-list.circles ul li .name {
+	margin-top: 14px;
+	font-size: 16px;
+	color: #d7dbe1;
+}
+
+.skills-list.circles .progress {
+	width: 90px !important;
+	height: 90px !important;
+	margin: 0 auto !important;
+	border-radius: 50% !important;
+	position: relative;
+	background: conic-gradient(var(--accent) 0deg, rgba(255, 255, 255, 0.08) 0deg) !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden !important;
+}
+
+.skills-list.circles .progress::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 0.66em;
+	height: 0.66em;
+	border-radius: 50%;
+	background: rgba(20, 24, 31, 0.95);
+	box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.skills-list.circles .progress span {
+	position: relative;
+	z-index: 3;
+	font-size: 14px;
+	font-weight: 700;
+	color: #fff;
+}
+
+.skills-list.circles .progress.p95 {
+	background: conic-gradient(var(--accent) 0 342deg, rgba(255, 255, 255, 0.08) 342deg 360deg) !important;
+}
+
+.skills-list.circles .progress.p90 {
+	background: conic-gradient(var(--accent) 0 324deg, rgba(255, 255, 255, 0.08) 324deg 360deg) !important;
+}
+
+.skills-list.circles .progress.p85 {
+	background: conic-gradient(var(--accent) 0 306deg, rgba(255, 255, 255, 0.08) 306deg 360deg) !important;
+}
+
+.skills-list.circles .progress.p80 {
+	background: conic-gradient(var(--accent) 0 288deg, rgba(255, 255, 255, 0.08) 288deg 360deg) !important;
+}
+
+/* ===== OTHER SKILLS ===== */
+.skills-list.list ul li .name {
+	position: relative;
+	padding-left: 18px;
+}
+
+.skills-list.list ul li .name::before {
+	content: "•";
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: var(--accent);
+	font-size: 20px;
+	line-height: 1;
+}
+
+.modern-cta {
+	text-align: center;
+	padding: 38px 26px;
+	background: linear-gradient(135deg, rgba(120, 204, 109, 0.12), rgba(120, 204, 109, 0.04));
+	border: 1px solid rgba(120, 204, 109, 0.16);
+	border-radius: 22px;
+	box-shadow: var(--shadow);
+}
+
+.modern-cta h3 {
+	font-size: 28px;
+	color: #fff;
+	margin-bottom: 12px;
+	font-weight: 700;
+}
+
+.modern-cta p {
+	color: var(--soft-text);
+	font-size: 15px;
+	margin-bottom: 26px;
+	line-height: 1.8;
+}
+
+.cta-buttons {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 14px;
+}
+
+.cta-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 14px 24px;
+	border-radius: 999px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	border: 1px solid transparent;
+	min-width: 170px;
+}
+
+.cta-btn.primary {
+	background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+	color: #fff;
+	box-shadow: 0 12px 28px rgba(120, 204, 109, 0.24);
+}
+
+.cta-btn.secondary {
+	background: rgba(255, 255, 255, 0.04);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	color: #fff;
+}
+
+.cta-btn:hover {
+	transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+	.profile .title {
+		font-size: 28px;
+	}
+
+	.profile .subtitle {
+		font-size: 14px;
+		padding: 0 18px;
+	}
+
+	.title {
+		font-size: 22px !important;
+	}
+
+	.modern-cta h3 {
+		font-size: 24px;
+	}
+
+	.cta-btn {
+		width: 100%;
+	}
+
+	.skills-list.circles ul li {
+		width: 100%;
+	}
+}
+
 @media (max-width: 560px) {
 	.card-started {
 		height: 480px;
@@ -477,7 +992,6 @@
 
 .card-inner:before,
 .card-inner:after {
-	content: '';
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1537,7 +2051,6 @@
 	display: inline-block;
 	font-family: "Ionicons";
 	color: #78cc6d;
-	speak: none;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -1549,49 +2062,50 @@
 }
 
 .skills-list.dotted ul li .progress {
-	background: transparent!important;
+	/* modern dotted style: horizontal row of circular dots */
+	background: transparent !important;
+	display: flex !important;
+	gap: 8px;
+	align-items: center;
+	margin-top: 10px;
+	overflow: auto !important;
+	-webkit-overflow-scrolling: touch;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	white-space: nowrap;
 }
 
 .skills-list.list ul li .progress {
 	display: none;
 }
 
-.skills-list.dotted ul li .progress .percentage {
-	position: relative;
-	overflow: hidden;
-	top: -2px;
-	height: 14px;
-	background: transparent!important;
-	z-index: 2;
+/* target the span elements used in the markup */
+.skills-list.dotted ul li .progress span.dg,
+.skills-list.dotted ul li .progress span.da {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	display: inline-block;
+	flex: 0 0 auto;
 }
 
-.skills-list.dotted ul li .progress .dg,
-.skills-list.dotted ul li .progress .da {
-	position: absolute;
-	left: 0;
-	top: -2px;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	height: 14px;
+.skills-list.dotted ul li .progress span.dg {
+	background: var(--accent) !important;
 }
 
-.skills-list.dotted ul li .progress .da {
-	top: 0;
+.skills-list.dotted ul li .progress span.da {
+	background: rgba(255, 255, 255, 0.14) !important;
 }
 
-.skills-list.dotted ul li .progress .dg span,
-.skills-list.dotted ul li .progress .da span {
-	display: block;
-	width: 14px;
-	height: 14px;
-	background: #eee;
-	-webkit-border-radius: 14px;
-	border-radius: 14px;
-}
-
-.skills-list.dotted ul li .progress .da span {
-	background: #78cc6d!important;
+@media (max-width: 480px) {
+	.skills-list.dotted ul li .progress {
+		gap: 6px;
+	}
+	.skills-list.dotted ul li .progress span.dg,
+	.skills-list.dotted ul li .progress span.da {
+		width: 10px;
+		height: 10px;
+	}
 }
 
 .skills-list.circles .progress.p51 .slice, 
@@ -1820,7 +2334,7 @@
 	width: 90px;
 	height: 90px;
 	border-radius: 90px;
-	background: #eeeeee;
+	background: conic-gradient(var(--accent) 0deg, rgba(255,255,255,0.08) 0deg) !important;
 }
 
 .skills-list.circles .progress *, .skills-list.circles .progress *:before, .skills-list.circles .progress *:after {
@@ -1837,24 +2351,25 @@
 	width: 100%;
 	height: 100%;
 	line-height: 90px;
-	font-size: 17px;
-	color: #323232;
-	font-weight: 500;
+	font-size: 14px;
+	color: #fff;
+	font-weight: 700;
 	text-align: center;
 	white-space: nowrap;
-	z-index: 2;
+	z-index: 3;
 }
 
 .skills-list.circles .progress:after {
 	position: absolute;
-	top: 0.09em;
-	left: 0.09em;
-	display: block;
 	content: " ";
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
 	border-radius: 50%;
 	background-color: #ffffff;
-	width: 0.82em;
-	height: 0.82em;
+	width: 0.66em;
+	height: 0.66em;
 }
 
 .skills-list.circles ul li .progress .percentage {
@@ -1866,6 +2381,7 @@
 	width: 1em;
 	height: 1em;
 	clip: rect(0em, 1em, 1em, 0.5em);
+	z-index: 1;
 }
 
 .skills-list.circles .progress.p1 .bar {
@@ -2039,8 +2555,9 @@
 .skills-list.circles .progress.p25 .bar {
 	-moz-transform: rotate(90deg);
 	-ms-transform: rotate(90deg);
-	-webkit-transform: rotate(90deg);
-	transform: rotate(90deg);
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+	z-index: 2;
 }
 
 .skills-list.circles .progress.p26 .bar {

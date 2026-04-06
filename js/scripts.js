@@ -157,8 +157,42 @@ $(function () {
 		Hire Button
 	*/
 	
+	// Helper: open card by id (mimics top-menu behavior; works for desktop and mobile)
+	function openCard(id) {
+		var width = $(window).width();
+		var card_item = $(id);
+		var menu_items = $('.top-menu li');
+		var menu_item = $('.top-menu a[href="'+id+'"]').closest('li');
+		if((width >= 1024)) {
+			if(!menu_item.hasClass('active') & (width > 1023) & $('#home-card').length) {
+				/* close card items */
+				menu_items.removeClass('active');
+				container.find(card_items).removeClass('animated '+animation_in);
+
+				if($(container).hasClass('opened')) {
+					container.find(card_items).addClass('animated '+animation_out);
+				}
+
+				/* open card item */
+				menu_item.addClass('active');
+				container.addClass('opened');
+				container.find(card_item).removeClass('animated '+animation_out);
+				container.find(card_item).addClass('animated '+animation_in);
+				
+				$(card_items).addClass('hidden');
+				
+				$(card_item).removeClass('hidden');
+				$(card_item).addClass('active');
+			}
+		} else {
+			/* mobile: smooth scroll to section */
+			var h = parseFloat($(id).offset().top);
+			$('body,html').animate({ scrollTop: h - 76 }, 800);
+		}
+	}
+
 	$('.lnks').on('click', '.lnk.discover', function(){
-		$('.top-menu a[href="#contacts-card"]').trigger('click');
+		openCard('#contacts-card');
 	});
 	
 	
@@ -405,11 +439,7 @@ $(function () {
 			Dotted Skills Line On Resize Window
 		*/
 
-		var skills_dotted = $('.skills-list.dotted .progress');
-		var skills_dotted_w = skills_dotted.width();
-		if(skills_dotted.length){
-			skills_dotted.find('.percentage .da').css({'width':skills_dotted_w+1});
-		}
+		// Dotted skills no longer use width-based overlays. No resize action required.
 
 		/*
 			Testimonials Carousel On Resize Window
@@ -425,12 +455,43 @@ $(function () {
 
 	function skills(){
 		var skills_dotted = $('.skills-list.dotted .progress');
-		var skills_dotted_w = skills_dotted.width();
-		if(skills_dotted.length){
-			skills_dotted.append('<span class="dg"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>');
-			skills_dotted.find('.percentage').append('<span class="da"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>');
-			skills_dotted.find('.percentage .da').css({'width':skills_dotted_w});
-		}
+		skills_dotted.each(function(){
+			var $p = $(this);
+			// If the progress already contains direct .dg or .da spans, normalize nested structures and skip appending
+			if($p.find('span.dg').length || $p.find('span.da').length){
+				// convert any nested spans (old structure) into direct spans
+				$p.find('span.dg').each(function(){
+					var $s = $(this);
+					if($s.children().length){
+						var cnt = $s.children().length;
+						var html = '';
+						for(var i=0;i<cnt;i++) html += '<span class="dg"></span>';
+						$s.replaceWith(html);
+					}
+				});
+				$p.find('span.da').each(function(){
+					var $s = $(this);
+					if($s.children().length){
+						var cnt = $s.children().length;
+						var html = '';
+						for(var i=0;i<cnt;i++) html += '<span class="da"></span>';
+						$s.replaceWith(html);
+					}
+				});
+				return;
+			}
+
+			// Fallback: generate 10 dots based on progress class (e.g. p90 -> 9 filled, 1 empty)
+			var cls = $p.attr('class') || '';
+			var m = cls.match(/p(\d{1,3})/);
+			var pct = m ? parseInt(m[1],10) : 0;
+			var total = 10;
+			var filled = Math.round((pct/100)*total);
+			var html = '';
+			for(var i=0;i<filled;i++) html += '<span class="dg"></span>';
+			for(var i=0;i<total-filled;i++) html += '<span class="da"></span>';
+			$p.append(html);
+		});
 	}
 	setTimeout(skills, 1000);
 

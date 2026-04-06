@@ -159,8 +159,12 @@ button:hover {
   color: #78cc6d;
 }
 
-.skills-list.dotted ul li .progress .da span {
-  background: #78cc6d!important;
+.skills-list.dotted ul li .progress span.dg {
+  background: #78cc6d !important;
+}
+
+.skills-list.dotted ul li .progress span.da {
+  background: rgba(255, 255, 255, 0.14) !important;
 }
 
 .skills-list.circles .progress .bar, 

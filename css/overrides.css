@@ -1,0 +1,693 @@
+/* --------------------------------------------------------------------------
+   Overrides moved from the inline <style> block in index.html
+   This file is intentionally loaded last to ensure these rules take
+   precedence over theme files.
+   -------------------------------------------------------------------------- */
+
+:root {
+    --accent: #78cc6d;
+    --accent-dark: #4fb943;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --soft-text: #b9c0c9;
+    --white: #ffffff;
+    --shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+}
+
+/* Remove rotated gray/white decorative panels behind profile slide */
+.card-started .profile .slide:before,
+.card-started .profile .slide:after {
+    display: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.background {
+    background: radial-gradient(circle at top left, rgba(120, 204, 109, 0.14), transparent 28%), radial-gradient(circle at bottom right, rgba(120, 204, 109, 0.08), transparent 25%);
+}
+
+.container.opened {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.card-inner,
+.card-started .profile,
+.content,
+.resume-item,
+.service-item,
+.skills-list,
+.info-list {
+    border-radius: 20px !important;
+}
+
+.card-inner {
+    box-shadow: var(--shadow);
+    border: 1px solid var(--card-border);
+    background: rgba(20, 24, 31, 0.92);
+}
+
+.card-started .profile {
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--card-border);
+    background: rgba(20, 24, 31, 0.92);
+}
+
+.profile .slide {
+    position: relative;
+}
+
+.profile .slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.55));
+}
+
+.profile .image img {
+    border: 5px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+.profile .title {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.profile .subtitle {
+    font-size: 15px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-top: 14px;
+    line-height: 1.8;
+}
+
+.profile .social {
+    margin-top: 16px;
+}
+
+.profile .social a {
+    width: 42px;
+    height: 42px;
+    /* use flex to perfectly center icon glyphs */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 0 6px;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.profile .social a:hover {
+    /* smaller lift so icons don't overlap nearby headings */
+    transform: translateY(-2px);
+    background: var(--accent);
+    box-shadow: 0 10px 25px rgba(120, 204, 109, 0.28);
+}
+
+/* Ensure icon glyphs are visible when the anchor background becomes green */
+.profile .social a .fab,
+.profile .social a .fas,
+.profile .social a .ion {
+    color: rgba(255,255,255,0.9);
+}
+
+.profile .social a:hover .fab,
+.profile .social a:hover .fas,
+.profile .social a:hover .ion {
+    color: #fff !important;
+}
+
+.lnks .lnk {
+    border-radius: 14px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+/* Give buttons a little breathing room so hover-lift doesn't overlap headings */
+.lnks {
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+}
+
+@media (max-width: 560px) {
+    .profile .title {
+        margin-top: 10px;
+        font-size: 28px;
+    }
+
+    .profile .subtitle {
+        margin-top: 12px;
+        font-size: 14px;
+    }
+
+    .profile .social {
+        margin-top: 12px;
+    }
+
+    .lnks {
+        margin-top: 14px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
+
+.lnks .lnk:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.lnks .lnk:first-child {
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: #fff !important;
+    border: none !important;
+}
+
+.lnks .lnk.discover {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.top-menu ul li a {
+    transition: all 0.25s ease;
+    border-radius: 14px;
+}
+
+.top-menu ul li a:hover,
+.top-menu ul li.active a {
+    background: rgba(120, 204, 109, 0.08);
+}
+
+.title {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.3px;
+    margin-bottom: 28px !important;
+}
+
+.text-box p,
+.resume-item p,
+.service-item p,
+.info-list ul li,
+.skills-list ul li .name {
+    color: var(--soft-text);
+    line-height: 1.9;
+    font-size: 14.5px;
+}
+.info-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.info-list ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    flex-direction: column; /* place label on top, value on next line */
+    align-items: flex-start;
+    gap: 8px;
+    text-align: left;
+}
+
+.info-list ul li:last-child {
+    border-bottom: none;
+}
+
+.info-list strong {
+    color: #fff;
+    font-weight: 600;
+    /* style the label as the green pill */
+    background: var(--accent);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 8px;
+    display: inline-block;
+    width: auto;      /* ensure pill only spans its text */
+    max-width: none;
+    margin-bottom: 8px; /* small gap before the value line */
+}
+
+.info-list .value {
+    color: var(--soft-text);
+    word-break: break-word;
+    text-align: left;
+}
+
+/* Ensure values start flush with the card padding (no extra indent from theme) */
+.info-list ul li:before,
+.info-list ul li strong:after {
+    display: none !important;
+}
+
+.info-list .value {
+    display: block; /* make sure value is a block starting at left edge */
+    margin: 0;
+    padding: 0;
+}
+
+/* small left indent so content doesn't hug the edge */
+.info-list .value {
+    margin-left: 12px;
+}
+
+@media (max-width: 560px) {
+    .info-list .value { margin-left: 0; }
+}
+
+/* value area (right side) */
+.info-list ul li > a,
+.info-list ul li > span,
+.info-list ul li > div,
+.info-list ul li {
+    color: var(--soft-text);
+}
+
+/* Small screen: stack label above the value for readability */
+@media (max-width: 560px) {
+    .info-list ul li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .info-list strong {
+        min-width: 0;
+    }
+}
+.about-highlights span {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: rgba(120, 204, 109, 0.12);
+    color: #dff8dc;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid rgba(120, 204, 109, 0.18);
+}
+
+/* right column placement for highlights */
+.about-highlights.right {
+    /* layout chips in two columns to use right-side space; keep them inside container */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: end; /* align the grid to the right edge */
+    gap: 12px 16px;
+    padding: 10px 8px 0 0;
+    width: 100%;
+}
+
+/* icons removed per request: contact rows and CTA buttons are text-only */
+
+.about-highlights.right span {
+    background: rgba(120,204,109,0.08);
+    border: 1px solid rgba(120,204,109,0.14);
+    display: inline-block;
+}
+
+/* CTA button icons (show only small glyph before text) */
+.cta-buttons .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* make a circular icon like the left profile social icons */
+.cta-buttons .cta-btn .cta-icon {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    margin-right: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.cta-buttons .cta-btn:hover .cta-icon {
+    background: var(--accent);
+    box-shadow: 0 10px 25px rgba(120, 204, 109, 0.28);
+}
+.cta-buttons .cta-btn .cta-icon i,
+.cta-buttons .cta-btn .cta-icon .fa,
+.cta-buttons .cta-btn .cta-icon .fab {
+    color: rgba(255,255,255,0.9);
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    /* stack centered on small screens */
+    .about-highlights.right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}
+
+.info-list {
+    padding: 22px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+}
+
+.info-list ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.info-list ul li:last-child {
+    border-bottom: none;
+}
+
+.info-list strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.service-item,
+.resume-item,
+.skills-list {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 24px !important;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+.service-item:hover,
+.resume-item:hover,
+.skills-list:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    border-color: rgba(120, 204, 109, 0.18);
+}
+
+.service-item .icon,
+.resume-title .icon,
+.skill-title .icon {
+    color: var(--accent);
+}
+
+.service-item .name,
+.resume-item .name,
+.resume-title .name,
+.skill-title .name {
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.2px;
+}
+
+.resume-item {
+    height: auto !important;
+    min-height: unset !important;
+    margin-bottom: 20px;
+}
+
+.resume-item .date {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(120, 204, 109, 0.12);
+    color: #dff8dc;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    border: 1px solid rgba(120, 204, 109, 0.18);
+}
+
+.resume-item .company {
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.resume-items {
+    display: block !important;
+}
+
+.border-line-h:after,
+.border-line-v:after {
+    display: none !important;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== SKILLS GENERAL ===== */
+.skills-list ul li {
+    margin-bottom: 22px;
+}
+
+.skills-list ul li:last-child {
+    margin-bottom: 0;
+}
+
+.skills-list ul li .name {
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* ===== CORE AREA / NORMAL BARS ===== */
+.skills-list:not(.dotted):not(.circles):not(.list) .progress {
+    height: 10px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 999px !important;
+    overflow: hidden;
+    width: 100% !important;
+    margin-top: 10px;
+}
+
+.skills-list:not(.dotted):not(.circles):not(.list) .progress .percentage {
+    height: 100%;
+    display: block;
+    background: linear-gradient(90deg, var(--accent), var(--accent-dark)) !important;
+    border-radius: 999px !important;
+    box-shadow: 0 0 15px rgba(120, 204, 109, 0.28);
+}
+
+/* ===== PROGRAMMING LANGUAGES / DOTTED ===== */
+.skills-list.dotted ul li .progress {
+    height: 12px !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    overflow: auto !important;
+    display: flex !important;
+    gap: 8px;
+    align-items: center;
+    margin-top: 12px;
+    width: 100%;
+    /* keep dots in a single row, allow horizontal scroll on very small widths */
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+
+@media (max-width: 480px) {
+    .skills-list.dotted ul li .progress {
+        gap: 6px;
+    }
+    .skills-list.dotted ul li .progress span.dg,
+    .skills-list.dotted ul li .progress span.da {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+
+
+/* ===== FRAMEWORKS / TOOLS / ROUND STYLE ===== */
+.skills-list.circles ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 28px 16px;
+}
+
+.skills-list.circles ul li {
+    width: calc(50% - 10px);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.skills-list.circles ul li .name {
+    margin-top: 14px;
+    font-size: 16px;
+    color: #d7dbe1;
+}
+
+.skills-list.circles .progress {
+    width: 90px !important;
+    height: 90px !important;
+    margin: 0 auto !important;
+    border-radius: 50% !important;
+    position: relative;
+    background: conic-gradient(var(--accent) 0deg, rgba(255, 255, 255, 0.08) 0deg) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden !important;
+}
+
+.skills-list.circles .progress::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.66em;
+    height: 0.66em;
+    border-radius: 50%;
+    background: rgba(20, 24, 31, 0.95);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.skills-list.circles .progress span {
+    position: relative;
+    z-index: 3;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.skills-list.circles .progress.p95 {
+    background: conic-gradient(var(--accent) 0 342deg, rgba(255, 255, 255, 0.08) 342deg 360deg) !important;
+}
+
+.skills-list.circles .progress.p90 {
+    background: conic-gradient(var(--accent) 0 324deg, rgba(255, 255, 255, 0.08) 324deg 360deg) !important;
+}
+
+.skills-list.circles .progress.p85 {
+    background: conic-gradient(var(--accent) 0 306deg, rgba(255, 255, 255, 0.08) 306deg 360deg) !important;
+}
+
+.skills-list.circles .progress.p80 {
+    background: conic-gradient(var(--accent) 0 288deg, rgba(255, 255, 255, 0.08) 288deg 360deg) !important;
+}
+
+/* ===== OTHER SKILLS ===== */
+.skills-list.list ul li .name {
+    position: relative;
+    padding-left: 18px;
+}
+
+.skills-list.list ul li .name::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent);
+    font-size: 20px;
+    line-height: 1;
+}
+
+.modern-cta {
+    text-align: center;
+    padding: 38px 26px;
+    background: linear-gradient(135deg, rgba(120, 204, 109, 0.12), rgba(120, 204, 109, 0.04));
+    border: 1px solid rgba(120, 204, 109, 0.16);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+}
+
+.modern-cta h3 {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.modern-cta p {
+    color: var(--soft-text);
+    font-size: 15px;
+    margin-bottom: 26px;
+    line-height: 1.8;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    min-width: 170px;
+}
+
+.cta-btn.primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: #fff;
+    box-shadow: 0 12px 28px rgba(120, 204, 109, 0.24);
+}
+
+.cta-btn.secondary {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+.cta-btn:hover {
+    transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+    .profile .title {
+        font-size: 28px;
+    }
+
+    .profile .subtitle {
+        font-size: 14px;
+        padding: 0 18px;
+    }
+
+    .title {
+        font-size: 22px !important;
+    }
+
+    .modern-cta h3 {
+        font-size: 24px;
+    }
+
+    .cta-btn {
+        width: 100%;
+    }
+
+    .skills-list.circles ul li {
+        width: 100%;
+    }
+}
