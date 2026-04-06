@@ -281,12 +281,15 @@ textarea:focus:-ms-input-placeholder {
 	background: #3e4148;
 }
 
-.skills-list.dotted ul li .progress .dg span, .skills-list.dotted ul li .progress .da span {
-	background: #3e4148;
+.skills-list.dotted ul li .progress span.dg {
+	background: var(--accent) !important;
+}
+.skills-list.dotted ul li .progress span.da {
+	background: rgba(255, 255, 255, 0.14) !important;
 }
 
 .skills-list.circles .progress {
-	background: #3e4148;
+	background: conic-gradient(var(--accent) 0deg, rgba(255,255,255,0.08) 0deg) !important;
 }
 
 .skills-list.circles .progress span {
@@ -295,6 +298,9 @@ textarea:focus:-ms-input-placeholder {
 
 .skills-list.circles .progress:after {
 	background-color: #31313a;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .content.works .filter-menu .f_btn {
