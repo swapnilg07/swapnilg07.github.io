@@ -139,8 +139,22 @@ body {
 /* Give buttons a little breathing room so hover-lift doesn't overlap headings */
 .lnks {
     margin-top: 18px;
+    position: static;
+    left: auto;
+    bottom: auto;
+    width: auto;
+    height: auto;
     display: flex;
     gap: 12px;
+}
+
+.card-started .profile .lnks .lnk {
+    float: none;
+    width: auto;
+    height: auto;
+    line-height: 1.2;
+    padding: 14px 16px;
+    flex: 1;
 }
 
 @media (max-width: 560px) {

@@ -1,23 +1,69 @@
-# Swapnil Gupta — Personal Portfolio
+# Swapnil Gupta Portfolio Website
 
-A personal resume and portfolio website built with HTML, CSS, and JavaScript.
+Personal portfolio and resume website of Swapnil Gupta, a Full Stack Developer with 5+ years of experience building scalable web applications with React, JavaScript, Python, and Django.
 
-## About
+Live website: https://swapnilg07.github.io
 
-This is the personal portfolio of **Swapnil Gupta**, a Full Stack Developer with 5+ years of experience building scalable web applications using ReactJS, Python, and Django.
+## Overview
 
-## Connect
+This repository contains a responsive developer portfolio showcasing:
 
-- **LinkedIn:** [linkedin.com/in/swapnilg07](https://www.linkedin.com/in/swapnilg07/)
-- **GitHub:** [github.com/swapnilg07](https://github.com/swapnilg07)
-- **Email:** sgmcanitt@gmail.com
+- Professional summary and resume
+- Technical skills and tools
+- Featured full-stack projects
+- Contact links and downloadable resume
+
+It is built as a static website and hosted on GitHub Pages.
+
+## Featured Projects
+
+- InvoicePro - Free GST Invoice Generator for Indian businesses:
+	https://swapnilg07.github.io/projects/invoicepro-gst-invoice-generator.html
+- DriveMaster - Secure file management platform:
+	https://swapnilg07.github.io/projects/drivemaster-file-management-platform.html
+- TemplateEase - Document workflow application:
+	https://swapnilg07.github.io/projects/templateease-document-workflow-app.html
 
 ## Tech Stack
 
-- HTML, CSS, JavaScript
-- ReactJS, Django, Python
-- AWS, Azure, PostgreSQL, Firebase
+- Frontend: HTML5, CSS3, JavaScript
+- UI and template styling: Font Awesome, Ionicons, Owl Carousel, Animate.css
+- Product engineering experience represented in portfolio projects: React, TypeScript, Python, Django, Supabase, PostgreSQL
+- Hosting: GitHub Pages
 
-## Live Site
+## SEO and Discoverability Setup
 
-[swapnilg07.github.io](https://swapnilg07.github.io)
+The site includes core technical SEO elements:
+
+- Descriptive title and meta description on home and project pages
+- Canonical links for primary URLs
+- Open Graph and Twitter meta tags for rich sharing
+- Structured data (JSON-LD)
+- Sitemap and robots configuration
+
+## Project Structure
+
+- Home page: /index.html
+- Project detail pages: /projects/
+- Main stylesheet entry: /css/site.css
+- Custom design overrides: /css/overrides.css
+- JavaScript assets: /js/
+- Resume and docs: /documents/
+
+## Local Development
+
+This is a static website, so you can run it with any local static server.
+
+Example (Python):
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open: http://localhost:8000
+
+## Connect
+
+- LinkedIn: https://www.linkedin.com/in/swapnilg07/
+- GitHub: https://github.com/swapnilg07
+- Email: sgmcanitt@gmail.com
