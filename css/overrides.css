@@ -102,6 +102,21 @@ body {
     letter-spacing: 0.4px;
 }
 
+.card-started .profile .title {
+    position: relative;
+    z-index: 2;
+}
+
+.profile .title .title-role {
+    display: block;
+    margin-top: 6px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0;
+    opacity: 0.85;
+}
+
 .profile .subtitle {
     font-size: 15px;
     color: var(--accent);
