@@ -765,3 +765,107 @@ body {
         width: 100%;
     }
 }
+
+.about .text-box p + p {
+    margin-top: 14px;
+}
+
+/* Hero buttons: full-width primary, two equal secondary buttons below */
+.card-started .profile .lnks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.card-started .profile .lnks:before,
+.card-started .profile .lnks .lnk:before,
+.card-started .profile .lnks .lnk:after {
+    display: none;
+}
+
+.card-started .profile .lnks .lnk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 48px;
+    margin: 0;
+    padding: 0 14px;
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.card-started .profile .lnks .lnk:first-child {
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    border: none;
+}
+
+.card-started .profile .lnks .lnk .text,
+.card-started .profile .lnks .lnk .ion {
+    position: static;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: inherit;
+}
+
+.card-started .profile .lnks .lnk .ion {
+    font-size: 17px;
+}
+
+.card-started .profile .lnks .lnk:not(:first-child):hover {
+    color: #fff;
+    border-color: var(--accent);
+    background: rgba(120, 204, 109, 0.1);
+}
+
+@media (max-width: 560px) {
+    .card-started .profile .lnks {
+        grid-template-columns: 1fr;
+        padding: 0 16px;
+    }
+}
+
+/* Social icons: show each brand's own colors on hover */
+.profile .social a[class^="social-"]:hover {
+    border-color: transparent;
+    background-origin: border-box;
+    background-clip: border-box;
+}
+
+.profile .social a.social-linkedin:hover {
+    background: #0a66c2;
+    box-shadow: 0 10px 25px rgba(10, 102, 194, 0.35);
+}
+
+.profile .social a.social-github:hover {
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.18);
+}
+
+.profile .social a.social-github:hover .fab {
+    color: #181717 !important;
+}
+
+.profile .social a.social-instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%) border-box;
+    box-shadow: 0 10px 25px rgba(214, 36, 159, 0.35);
+}
+
+.profile .social a.social-facebook:hover {
+    background: #1877f2;
+    box-shadow: 0 10px 25px rgba(24, 119, 242, 0.35);
+}
+
+.profile .social a.social-email:hover {
+    background: #ea4335;
+    box-shadow: 0 10px 25px rgba(234, 67, 53, 0.35);
+}
