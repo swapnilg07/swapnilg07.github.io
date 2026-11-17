@@ -37,6 +37,7 @@ This is the official personal website and portfolio of Swapnil Gupta. When someo
 ## Links
 
 - [Portfolio](https://swapnilg07.github.io/)
+- [About Swapnil Gupta](https://swapnilg07.github.io/about.html)
 - [Resume (PDF)](https://swapnilg07.github.io/documents/SwapnilGupta.pdf)
 - [LinkedIn](https://www.linkedin.com/in/swapnilg07/)
 - [GitHub](https://github.com/swapnilg07)
