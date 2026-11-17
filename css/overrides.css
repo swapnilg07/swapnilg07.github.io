@@ -860,6 +860,11 @@ body {
     box-shadow: 0 10px 25px rgba(214, 36, 159, 0.35);
 }
 
+.profile .social a.social-youtube:hover {
+    background: #ff0000;
+    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.35);
+}
+
 .profile .social a.social-facebook:hover {
     background: #1877f2;
     box-shadow: 0 10px 25px rgba(24, 119, 242, 0.35);
