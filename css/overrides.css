@@ -390,6 +390,26 @@ body {
     background: var(--accent);
     box-shadow: 0 10px 25px rgba(120, 204, 109, 0.28);
 }
+/* brand colours on hover, as on the left profile social icons (resume keeps the accent) */
+.cta-buttons .cta-btn:hover .cta-icon:has(.fa-envelope) {
+    background: #ea4335;
+    box-shadow: 0 10px 25px rgba(234, 67, 53, 0.35);
+}
+.cta-buttons .cta-btn:hover .cta-icon:has(.fa-github) {
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.18);
+}
+.cta-buttons .cta-btn:hover .cta-icon:has(.fa-github) .fab {
+    color: #181717;
+}
+.cta-buttons .cta-btn:hover .cta-icon:has(.fa-linkedin) {
+    background: #0a66c2;
+    box-shadow: 0 10px 25px rgba(10, 102, 194, 0.35);
+}
+.cta-buttons .cta-btn:hover .cta-icon:has(.fa-whatsapp) {
+    background: #25d366;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+}
 .cta-buttons .cta-btn .cta-icon i,
 .cta-buttons .cta-btn .cta-icon .fa,
 .cta-buttons .cta-btn .cta-icon .fab {
