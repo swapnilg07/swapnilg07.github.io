@@ -68,4 +68,5 @@ Then open: http://localhost:8000
 - GitHub: https://github.com/swapnilg07
 - Instagram: https://www.instagram.com/swapnilg07/
 - YouTube: https://www.youtube.com/@swapnilg07
+- X (Twitter): https://x.com/Swapnilg07
 - Email: sgmcanitt@gmail.com
